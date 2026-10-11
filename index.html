@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tug of War: Mathematics</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 class="main-title">TUG OF WAR: MATHEMATICS</h1>
+
+    <main class="game-container">
+        <!-- TEAM 1 (Blue) -->
+        <section class="team-panel blue">
+            <div class="panel-header">Team 1 <span id="score-1" class="score-pill">0</span></div>
+            <div class="problem-card" id="eqn-1">7 + 4 = ?</div>
+            <div class="calc-screen" id="disp-1">0</div>
+            <div class="keypad" data-team="1">
+                <button data-val="1">1</button><button data-val="2">2</button><button data-val="3">3</button>
+                <button data-val="4">4</button><button data-val="5">5</button><button data-val="6">6</button>
+                <button data-val="7">7</button><button data-val="8">8</button><button data-val="9">9</button>
+                <button class="btn-clear" data-val="clear">✕</button>
+                <button data-val="0">0</button>
+                <button class="btn-check" data-val="check">✔</button>
+            </div>
+        </section>
+
+        <!-- CENTERAL DASHBOARD -->
+       <section class="central-dashboard">
+        <div class="dashboard-scores">
+            <div class="score-card blue-score">
+                <small>Team 1</small>
+                <div id="score-1-outer">0</div>
+            </div>
+            
+            <div class="timer-display">
+                ⏱ <span id="timer">00:00</span>
+            </div>
+
+            <div class="score-card red-score">
+                <small>Team 2</small>
+                <div id="score-2-outer">0</div>
+            </div>
+        </div>
+
+        <div class="tug-field">
+            <div class="rope"></div>
+            <div id="flag" class="flag"></div>
+            <div class="player-sprites">
+                <div class="sprite blue-team">👤👤</div>
+                <div class="sprite red-team">👤👤</div>
+            </div>
+        </div>
+    </section>
+
+        <!-- TEAM 2 (Red) -->
+        <section class="team-panel red">
+            <div class="panel-header">Team 2 <span id="score-2" class="score-pill">0</span></div>
+            <div class="problem-card" id="eqn-2">9 + 6 = ?</div>
+            <div class="calc-screen" id="disp-2">0</div>
+            <div class="keypad" data-team="2">
+                <button data-val="1">1</button><button data-val="2">2</button><button data-val="3">3</button>
+                <button data-val="4">4</button><button data-val="5">5</button><button data-val="6">6</button>
+                <button data-val="7">7</button><button data-val="8">8</button><button data-val="9">9</button>
+                <button class="btn-clear" data-val="clear">✕</button>
+                <button data-val="0">0</button>
+                <button class="btn-check" data-val="check">✔</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="win-screen" class="win-overlay hidden">
+        <div class="win-content">
+            <h2 id="win-message">TEAM 1 WINS!</h2>
+            <button>Play Again</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+<!-- onclick="location.reload()" -->
